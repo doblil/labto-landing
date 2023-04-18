@@ -1,0 +1,169 @@
+@import '../sass/base/variables.scss';
+@import '../sass/base/general.scss';
+
+
+.partnership{
+    background-color:rgba($color: $substrate-color, $alpha: 0.3);
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 40px;
+    backdrop-filter: blur(8px);
+    padding: 20px 40px;
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+    }
+    &__box{
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        transition: all 1s;
+        &:hover{
+            
+            .caption__circle1{
+                position: absolute;
+                left: -20px;
+                bottom: -5px;
+                height: 25px;
+                width: 25px;
+                -webkit-animation: in 3.5s;
+                animation: in 3.5s;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                box-shadow: $main-shadow;
+                border-radius: 100px;
+            }
+            .caption__circle2{
+                position: absolute;
+                left: -42px;
+                bottom: 12px;
+                height: 20px;
+                width: 20px;
+                -webkit-animation: in 2.5s;
+                animation: in 2.5s;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                box-shadow: $main-shadow;
+                border-radius: 100px;
+            }
+            .caption__circle3{
+                position: absolute;
+                left: -10px;
+                bottom: 30px;
+                height: 15px;
+                width: 15px;
+                -webkit-animation: in 4.5s;
+                animation: in 4.5s;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                box-shadow: $main-shadow;
+                border-radius: 100px;
+            }
+        }
+    }
+    &__caption{
+        font-family: "Source Sans Pro";
+        font-size: 22px;
+        background-color: rgba($color: $utility-color, $alpha: 0.45);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba($color: #fff, $alpha: 0.3);
+        box-shadow: $main-shadow;
+        color: white;
+        width: max-content;
+        padding: 22px;
+        border-radius: 14px;
+        position: relative;
+        cursor: default;
+        transition: all 1s;
+        margin-bottom: -40px;
+        margin-left: -10px;
+    }
+    &__text{
+        font-size: 15px;
+        width: 100%;
+        background-color: white;
+        padding: 35px 15px 15px 15px;
+        border-radius: 14px;
+        background-color: rgba($color: #fff, $alpha: 0.7);
+        transition: all 1.7s;
+        &:hover{
+            box-shadow: $main-shadow;
+
+        }
+    }
+    &__item{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 14px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.caption__circle1{
+    position: absolute;
+    left: -20px;
+    bottom: -5px;
+    height: 25px;
+    width: 25px;
+    animation-iteration-count: infinite;
+    -webkit-animation: out 2s;
+    animation: out 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+}
+.caption__circle2{
+    position: absolute;
+    left: -42px;
+    bottom: 12px;
+    height: 20px;
+    width: 20px;
+    animation-iteration-count: infinite;
+    -webkit-animation: out 2s;
+    animation: out 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+}
+.caption__circle3{
+    position: absolute;
+    left: -10px;
+    bottom: 30px;
+    height: 15px;
+    width: 15px;
+    -webkit-animation: out 2s;
+    animation: out 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@media (max-width: 1200px) {
+    .partnership{
+        &__box{
+            width: 100%;
+            max-width: 550px;
+        }
+        &__item{
+            font-size: 14px;
+        }
+        &__caption{
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 991px) {
+
+}
+@media (max-width: 767px) {
+
+}
+@media (max-width: 575px) {}

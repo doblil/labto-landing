@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+
+@keyframes horisontal {
+    from {transform: translateX(0);}
+    50%{transform: translateY(15px);}
+    to {transform: translateX(15px);}
+}
+
+@keyframes vertical {
+    from {transform: translateY(0);}
+    50%{transform: translateX(9px);}
+    to {transform: translateY(15px);}
+}
+
+@keyframes fly {
+    from {transform: translateY(3px);
+        opacity: 100%;}
+    60%{opacity: 100%;}
+    to {transform: translateY(-5px);
+        opacity: 4%;}
+}
+
+@keyframes bubbles {
+    from {transform: translateY(0px);
+        opacity: 100%;}
+    50%{opacity: 80%;}
+    to {transform: translateY(-20px);
+        opacity: 4%;}
+}
+
+@keyframes in {
+    from {transform: translateY(0px);
+        opacity: 0%;}
+    50%{opacity: 100%;}
+    to {transform: translateY(-20px);
+        opacity: 0%;}
+  }
+   @keyframes out {
+    from {transform: translateY(-20px);
+        opacity: 0%;}
+    50%{opacity: 70%;}
+    to {transform: translateY(0px);
+        opacity: 0%;}
+  }

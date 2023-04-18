@@ -1,0 +1,108 @@
+@import '../sass/base/variables.scss';
+@import '../sass/base/general.scss';
+
+.possibilities{
+    margin: 20px;
+    backdrop-filter: blur(8px);
+    background-color: rgba($color: #ffffff, $alpha: 0.15);
+    border: 1px solid rgba($color: #fff, $alpha: 0.3);
+    border-radius: 20px;
+    box-shadow:$main-shadow;
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__card{
+        width: 48%;
+        border-radius: 18px;
+        border: 1px solid rgba($color: #fff, $alpha: 0.2);
+        background-color:rgba($color: $main-color, $alpha: 0.7);
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-right: 11px;
+        margin-bottom: 15px;
+        color: white;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 24px;
+        cursor:default;
+        transition: all 0.5s;
+        backdrop-filter: blur(8px);
+        &:hover{
+            background-color: #00858a;
+            box-shadow:$main-shadow;
+        }
+    }
+    &__icon{
+        width: 110px;
+        height: 110px;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $fond-color;
+        padding: 10px;
+        margin-right: 20px;
+    }  
+    &__descr{
+        width: calc(100% - 130px);
+        font-size: 17px;
+        p{
+            font-size: 11px;
+            line-height: 13px;
+            margin-top: 14px;
+        }
+    }
+}
+
+.horisontal{
+    animation-name: horisontal;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    &_1{
+        animation-duration: 6s;
+    }
+    &_2{
+        animation-duration: 7s;
+    }
+    &_3{
+        animation-duration:8s;
+    }
+}
+
+.vertical{
+    animation-name: vertical;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    &_1{
+        animation-duration: 6s;
+    }
+    &_2{
+        animation-duration: 7s;
+    }
+    &_3{
+        animation-duration:8s;
+    }
+
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 991px) {
+    .possibilities{
+
+        &__card{
+            margin: 8px auto;
+            width: 100%;
+            max-width: 700px;
+        }
+    }
+}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}

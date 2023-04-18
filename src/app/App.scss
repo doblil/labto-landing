@@ -1,0 +1,86 @@
+@import '../sass/base/general.scss';
+@import '../sass/base/keyframes.scss';
+@import '../sass/base/variables.scss';
+
+* {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.App{
+    background-color: $main-color;
+    position: relative;
+overflow-x: hidden;
+}
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+section{
+    padding: 20px;
+    min-height: calc(100vh - 140px);
+}
+.circles{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:before{
+        content: '';
+        height: 600px;
+        width: 600px;
+        border-radius: 500px;
+        background-color:$utility-color ;
+        position: fixed;
+        top: 150px;
+        right: -70px;
+        z-index: 0;
+        animation: jump 25s ease-in-out infinite;    }
+    &:after{
+        content: '';
+        height: 200px;
+        width: 200px;
+        border-radius: 500px;
+        background-color: #ffb027;
+        position: fixed;
+        top: 140px;
+        left: 170px;
+        z-index: 0;
+        animation: jump 17s ease-in-out infinite;
+
+    }
+}
+@keyframes jump{
+    0%{
+        transform: translateY(-85px);
+    }
+    50%{
+        transform: translateY(85px);
+    }
+    100%{
+        transform: translateY(-85px);
+    }
+}
+
+
+@media (max-width: 1200px) {}
+@media (max-width: 991px) {
+    .circles{
+        &:before{
+            height: 440px;
+            width: 440px;
+            top: 210px;
+            right: -180px;   
+        }
+        &:after{
+            height: 170px;
+            width: 170px;
+            top: 140px;
+            left: 40px;
+        }
+    }
+}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}

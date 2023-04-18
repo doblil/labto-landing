@@ -1,0 +1,125 @@
+@import '../sass/base/variables.scss';
+@import '../sass/base/general.scss';
+
+
+.price{
+    background-color: rgba($color: $fond-color, $alpha: 0.7) ;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+
+    height: 100%;
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+    &__box{
+        width: 27%;
+        min-height: 350px;
+        padding: 40px 20px 20px 20px;
+        background-color:rgba($color: #fff, $alpha: 0.8);
+        box-shadow: $main-shadow;
+        border-radius: 17px;
+        margin: 50px 10px 0 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__heading{
+        width: 85%;
+        height: 170px;
+        padding: 15px;
+        margin-top: -60px;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #ffb027;
+        border-radius: 17px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
+        transition: all 1s;
+        &:hover{
+            box-shadow: $main-shadow;
+            &:before{
+                content: '';
+                background-image: conic-gradient(
+                    transparent 20deg,
+                    #fff 100deg,
+                    transparent 180deg
+                );
+                width: 250%;
+                height: 250%;
+                position: absolute;
+                animation: rotate 3s linear infinite;
+            }
+            &:after{
+                content: '';
+                width: calc(100% - 8px);
+                height: calc(100% - 8px);
+                background: #ffb027;
+                position: absolute;
+                border-radius: 14px;
+            }
+        }
+    }
+    &__name{
+        font-size: 25px;
+        font-weight: 700;
+        z-index: 2;
+    }
+    &__cost{
+        font-family: "Source Sans Pro";
+        font-size: 37px;
+        z-index: 2;
+    }
+    &__descr{
+        font-size: 12px;
+        z-index: 2;
+    }
+    &__measure{
+        font-size: 14px;
+        letter-spacing: 2px;
+        z-index: 2;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .price{
+        &__box{
+            width: 87%;
+            max-width: 320px;
+        }
+        &__name{
+            font-size: 18px;
+        }
+        &__cost{
+            font-size: 33px;
+        }
+    }
+
+}
+@media (max-width: 991px) {
+
+}
+@media (max-width: 767px) {
+
+}
+@media (max-width: 575px) {}
